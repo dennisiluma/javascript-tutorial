@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial</title>
+    <!-- <script src="loop.js"></script> -->
+    <!-- <script src="arrays.js"></script> -->
+    <script src="string.js"></script>
+    <script src="conditionalStatement.js"></script>
+    <script src="set.js"></script>
+    <script src="map.js"></script>
+</head>
+
+<body style="text-align: center;">
+    <!-- A simple toggle DOM Manipulation project -->
+    <h1>Dom Manipulation </h1> 
+    <p id="show_up" style="font-size: 40px; display: none;">HEY!! I"M CURRENTLY SHOWING UP</p>
+    <button onclick="handleShowButton()" id="show_button" style="font-size: 30px; background-color:aqua; ">Show Me</button>
+
+    <script>
+        function handleShowButton() {
+            const showUp = document.getElementById("show_up"); //we are storing the object with id of "show_up"
+            const showButton = document.getElementById("show_button"); //we are stroring the button object by using the id
+
+            if(showButton.innerText === "Show Me"){ //Here, if button text is "Show me" when it is clicked, it should display the show_up else it should hide it
+                showUp.style.display = "block";
+                showButton.innerText = "Hide Me";
+            }else{
+                showUp.style.display = "none"
+                showButton.innerText = "Show Me"
+            }
+        }
+    </script>
+</body>
+
+</html>
